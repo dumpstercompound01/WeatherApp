@@ -6,4 +6,4 @@ A pretty weather website that shows temperature and weather conditions.
 1. Download all files
 2. Open terminal and type: `npm install`
 3. Then type: `node script.js`
-4. Open browser to: http://localhost:3001
+4. Open browser to: http://localhost:3021
