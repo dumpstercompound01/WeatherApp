@@ -12,7 +12,6 @@ btn.addEventListener('click', async () => {
   resultDiv.textContent = 'Loading... 🌈';
   
   try {
-    // Call your Express server endpoint instead of the API directly
     const res = await fetch(`/weather/${encodeURIComponent(city)}`);
     
     if (!res.ok) {
@@ -22,7 +21,6 @@ btn.addEventListener('click', async () => {
     
     const data = await res.json();
     
-    // Check if the API returned an error
     if (data.cod && data.cod !== 200) {
       throw new Error(data.message || 'Unknown error from weather API');
     }
@@ -39,4 +37,5 @@ btn.addEventListener('click', async () => {
     console.error('Failed to fetch weather data:', error);
     resultDiv.textContent = 'Oops! City not found. Try again! 💖';
   }
+
 });
