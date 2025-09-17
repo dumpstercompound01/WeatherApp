@@ -6,10 +6,8 @@ const PORT = process.env.PORT || 3021;
 
 const apiKey = "f6039798d0786cec4527239a2d4b0b3a"; 
 
-// Serve static files from public directory
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Weather API endpoint
 app.get('/weather/:city', async (req, res) => {
   try {
     const city = req.params.city;
@@ -23,7 +21,7 @@ app.get('/weather/:city', async (req, res) => {
   }
 });
 
-// Start server
 app.listen(PORT, () => {
   console.log(`🌸 Weather app running on http://localhost:${PORT}`);
+
 });
